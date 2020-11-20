@@ -1,0 +1,39 @@
+# baseURL = "https://summittdweller.com/"
+#
+languageCode = "en-US"
+title = "SummittDweller.com"
+theme = "bootstrap-bp-hugo-startpage"
+googleAnalytics = "UA-146526628-1"
+copyright = "Mark A. McFate"
+enableRobotsTXT = true
+pygmentsCodeFences = true
+canonifyurls = true
+paginate = 5
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+
+[permalinks]
+  posts = "/:year/:month/:slug/"
+  post = "/:year/:month/:slug/"
+  pages = "/:slug/"
+  page = "/:slug/"
+
+[Author]
+  name = "Mark A. McFate, but mostly Mackenzie G. McFate"
+
+[params]
+  description = "Welcome to Summitt Dweller's personal server!"
+  #images = ["logo.jpg"]
+  startPageColumns = true
+  welcomeText = "This landing page is designed solely to provide navigation to the sites/services listed below."
+  buildDate = '2020-08-07 08:32'
+  footertext = "<a href='https://summittdweller.com/blogs/mark' target='_blank' class='footer'> <i class='fas fa-code'></i> &nbsp;&nbsp;Hugo site by the McFates.</a>"
+  twitter = "https://twitter.com/SummittDweller"
+  facebook = "https://facebook.com/Summitt.Dweller"
+
+[[params.searchEngines]]
+  name = "Google"
+  activated = true
+  url = "https://www.google.com/search"
