@@ -1,0 +1,75 @@
+---
+- group: Sites @ SummittDweller.com
+  items:
+    - title: "@SummittDweller's Personal Blog"
+      icon: fas fa-edit
+      url: https://blog.summittdweller.com
+      description: The very pinnacle of blogdom.
+    - title: "Mackenzie's Personal Blog"
+      icon: fas fa-magic
+      url: https://m4ck3ngm.com/
+      description: "HIRE ME! Do as she says...please."
+    - title: "The CATalogue"
+      icon: fas fa-cat
+      url:
+      description: "A CATaclysmal CATholic CATastrophist's CATegorizing CATastrophe CATharsis.  Yes, it's about cats."
+
+- group: OneTab Links
+  items:
+    - title: DigitalOcean and eNom Controls
+      lastmod: 2019-10-28T15:14:28-05:00
+      url: https://www.one-tab.com/page/hm2naf30RuKhc_9t-2e2uA
+      hostname: Marks-Air.grinnell.edu
+      description: Just what the name says.
+    - title: "Mark's Onetab from February and March 2020"
+      icon: fas fa-link
+      url: https://www.one-tab.com/page/qkjlp_5bSqayOtwcOggVDg
+      description: Just what the name says.
+    - title: Mark's Home Office Tabs - No VPN
+      icon: fas fa-home
+      url: https://www.one-tab.com/page/Da1WeMHXQc2EqPF_1xaL-A
+      description: This is a link to Mark's work-related tabs that do not require a VPN connection.
+    - title: Mark's Essential / Daily GC Links
+      icon: fas fa-link
+      url: https://www.one-tab.com/page/I76JpNGiSnmzDzY1aFPg0w
+      description: Essential links pertinent to the _Digital Library Application Deveoloper_'s work at Grinnell College.
+    - title: DrupalCorn 2019
+      url: https://www.one-tab.com/page/T9LykkXSRairWN8T-Kk1Wg
+      icon: fab fa-drupal
+      description: A Firefox session of tabs from my experience at [DrupalCorn Camp 2019](https://2019.drupalcorn.org/).
+    - title: 3D Printing Initial Tabs
+      lastmod: 2019-12-28T17:12:15-05:00
+      url: https://www.one-tab.com/page/lt9MfOIRTlac-ShYhT23Cw
+      hostname: Marks-Mac-Mini.local
+      description: Just what the name says.
+    - title: Geocaching Review Essentials
+      lastmod: 2019-10-28T15:16:13-05:00
+      url: https://www.one-tab.com/page/s9pYSOQWTjqNhPG5mZsHwQ
+      hostname: Marks-Air.grinnell.edu
+      description: Just what the name says.
+
+---
+
+## Elements below are effectively disabled...they appear after the close (---) of the YAML data.
+- group: Social Media
+    - title: Facebook
+      url: https://www.facebook.com
+      icon: fab fa-facebook
+    - title: Instagram
+      url: https://www.instagram.com
+      icon: fab fa-instagram
+    - title: Spotify
+      url: https://www.spotify.com
+      icon: fab fa-spotify
+- group: Development
+  items:
+    - title: Confluence
+      url: https://www.atlassian.com/software/confluence
+      icon: fab fa-confluence
+    - title: GitHub
+      url: https://github.com/McFateM/
+      icon: fab fa-github
+- group: eCommerce
+    - title: Amazon
+      url: https://www.amazon.com
+      icon: fab fa-amazon

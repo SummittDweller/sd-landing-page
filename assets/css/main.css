@@ -1,0 +1,40 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    background: url("../images/bg.jpg");
+    background-size: cover;
+    flex-wrap: wrap;
+}
+
+.card {
+    opacity: 0.8;
+}
+.card:hover {
+    opacity: 1.0;
+}
+
+.cursorPointer:hover {
+    cursor: pointer;
+}
+
+h1, h2, h3, p {
+  color: white;
+}
+
+a, span.groupText, i.fas, i.fab {
+  color: green;
+}
+
+p.disclaimer {
+  margin-top: 10px;
+}
+
+span.groupTitle {
+  font-size: 2em;
+}
