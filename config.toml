@@ -24,7 +24,7 @@ paginate = 5
   name = "Mark A. McFate, but mostly Mackenzie G. McFate"
 
 [params]
-  description = "Welcome to Summitt Dweller's personal server!"
+  description = "Welcome to Summitt Dweller's landing page on DigitalOcean's App Platform!"
   #images = ["logo.jpg"]
   startPageColumns = true
   welcomeText = "This landing page is designed solely to provide navigation to the sites/services listed below."
