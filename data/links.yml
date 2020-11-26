@@ -4,15 +4,23 @@
     - title: "@SummittDweller's Personal Blog"
       icon: fas fa-edit
       url: https://blog.summittdweller.com
-      description: The very pinnacle of blogdom.
+      description: The very pinnacle of blogdom?  Now on DigitalOcean's App Platform.
     - title: "Mackenzie's Personal Blog"
       icon: fas fa-magic
       url: https://m4ck3ngm.com/
       description: "HIRE ME! Do as she says...please."
-    - title: "The CATalogue"
-      icon: fas fa-cat
-      url:
-      description: "A CATaclysmal CATholic CATastrophist's CATegorizing CATastrophe CATharsis.  Yes, it's about cats."
+    - title: "The Helge Project"
+      icon: fas fa-monument
+      url: https://helge.mcfate.family
+      description: Mackenzie's Python-to-Hugo McFate/Mikkelson family tree project.
+    - title: "The Compass Rose Band"
+      icon: far fa-compass
+      url: https://compassroseband.net
+      description: Internet home of 'The Compass Rose Band' out of Cedar Rapids, Iowa.
+#   - title: "The CATalogue"
+#     icon: fas fa-cat
+#     url:
+#     description: "A CATaclysmal CATholic CATastrophist's CATegorizing CATastrophe CATharsis.  Yes, it's about cats."
 
 - group: OneTab Links
   items:
