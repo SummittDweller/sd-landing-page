@@ -27,7 +27,12 @@
     - title: DigitalOcean and eNom Controls
       lastmod: 2019-10-28T15:14:28-05:00
       url: https://www.one-tab.com/page/hm2naf30RuKhc_9t-2e2uA
-      hostname: Marks-Air.grinnell.edu
+      icon: fa fa-tachometer
+      description: Just what the name says.
+    - title: Paperless-ng: All the Stuff
+      lastmod: 2021-01-05T17:28:27-06:00
+      url: https://www.one-tab.com/page/RuQ6BPpsQBCmstoq899_cQ
+      icon: fa fa-paper-plane
       description: Just what the name says.
     - title: "Mark's Onetab from February and March 2020"
       icon: fas fa-link
