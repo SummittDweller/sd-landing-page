@@ -17,6 +17,14 @@
       icon: far fa-compass
       url: https://compassroseband.net
       description: Internet home of 'The Compass Rose Band' out of Cedar Rapids, Iowa.
+    - title: "Tama Cafe"
+      icon: fas fa-utensils
+      url: https://tamacafe.TamaToledo.com
+      description: Internet home of the Tama Cafe.
+    - title: "Bumblebee's Pizza"
+      icon: fas fa-pizza-slice
+      url: https://bumblebeespizza.com
+      description: Internet home of Toledo's new Bumblebee's Pizza.
 #   - title: "The CATalogue"
 #     icon: fas fa-cat
 #     url:
@@ -29,6 +37,16 @@
       url: https://www.one-tab.com/page/hm2naf30RuKhc_9t-2e2uA
       icon: fas fa-tachometer-alt
       description: Just what the name says.
+    - title: Geocaching Review Essentials
+      lastmod: 2019-10-28T15:16:13-05:00
+      icon: fas fa-map-marked-alt
+      url: https://www.one-tab.com/page/s9pYSOQWTjqNhPG5mZsHwQ
+      description: Just what the name says.
+    - title: Toledo Community Visioning Resources
+      lastmod: 2021-02-20T09:38:20-06:00
+      icon: fas fa-users-cog
+      url: https://www.one-tab.com/page/T11FiwXRSAet6YXyCiSXLA
+      description: Resources for Toledo's 2021 Community Visioning Project
     - title: Paperless-ng - All the Stuff
       lastmod: 2021-01-05T17:28:27-06:00
       url: https://www.one-tab.com/page/RuQ6BPpsQBCmstoq899_cQ
@@ -53,12 +71,8 @@
     - title: 3D Printing Initial Tabs
       lastmod: 2019-12-28T17:12:15-05:00
       url: https://www.one-tab.com/page/lt9MfOIRTlac-ShYhT23Cw
+      icon: fas fa-cubes
       hostname: Marks-Mac-Mini.local
-      description: Just what the name says.
-    - title: Geocaching Review Essentials
-      lastmod: 2019-10-28T15:16:13-05:00
-      url: https://www.one-tab.com/page/s9pYSOQWTjqNhPG5mZsHwQ
-      hostname: Marks-Air.grinnell.edu
       description: Just what the name says.
 
 ---
