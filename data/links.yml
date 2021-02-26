@@ -96,7 +96,7 @@
     - title: GitHub
       url: https://github.com/McFateM/
       icon: fab fa-github
-- group: eCommerce
+- group: eCommerce 
     - title: Amazon
       url: https://www.amazon.com
       icon: fab fa-amazon
