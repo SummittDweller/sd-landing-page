@@ -17,6 +17,10 @@
       icon: fas fa-monument
       url: https://helge.mcfate.family
       description: Mackenzie's Python-to-Hugo McFate/Mikkelson family tree project.
+    - title: "The Wieting Theatre"
+      icon: fas fa-theater-masks
+      url: https://wieting.tamatoledo.net
+      description: The new/static internet home of Toledo, Iowa's 'Wieting Theatre'.
     - title: "The Compass Rose Band"
       icon: far fa-compass
       url: https://compassroseband.net
