@@ -5,6 +5,10 @@
       icon: fas fa-edit
       url: https://blog.summittdweller.com
       description: The very pinnacle of blogdom?  Now on DigitalOcean's App Platform.
+    - title: "I Like to Hike (and Bike)"
+      icon: fas fa-walking
+      url: https://hikes.summittdweller.com
+      description: A record of walks (hikes) I've taken, and an occasional bike ride.
     - title: "Mackenzie's Personal Blog"
       icon: fas fa-magic
       url: https://m4ck3ngm.com/
