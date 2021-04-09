@@ -25,10 +25,10 @@
       icon: far fa-compass
       url: https://compassroseband.net
       description: Internet home of 'The Compass Rose Band' out of Cedar Rapids, Iowa.
-    - title: "Tama Cafe"
-      icon: fas fa-utensils
-      url: https://tamacafe.TamaToledo.com
-      description: Internet home of the Tama Cafe.
+    # - title: "Tama Cafe"
+    #   icon: fas fa-utensils
+    #   url: https://tamacafe.TamaToledo.com
+    #   description: Internet home of the Tama Cafe.
     - title: "Bumblebee's Pizza"
       icon: fas fa-pizza-slice
       url: https://bumblebeespizza.com
@@ -40,9 +40,9 @@
 
 - group: OneTab Links
   items:
-    - title: DigitalOcean and eNom Controls
-      lastmod: 2019-10-28T15:14:28-05:00
-      url: https://www.one-tab.com/page/hm2naf30RuKhc_9t-2e2uA
+    - title: DigitalOcean, Netlify and eNom Controls
+      lastmod: 2021-04-09T09:29:27-05:00
+      url: https://www.one-tab.com/page/OyukPN3LRjey-PiSUZrlNw
       icon: fas fa-tachometer-alt
       description: Just what the name says.
     - title: Geocaching Review Essentials
