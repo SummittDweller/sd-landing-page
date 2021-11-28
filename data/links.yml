@@ -29,10 +29,10 @@
     #   icon: fas fa-utensils
     #   url: https://tamacafe.TamaToledo.com
     #   description: Internet home of the Tama Cafe.
-    - title: "Bumblebee's Pizza"
-      icon: fas fa-pizza-slice
-      url: https://bumblebeespizza.com
-      description: Internet home of Toledo's new Bumblebee's Pizza.
+    # - title: "Bumblebee's Pizza"
+    #   icon: fas fa-pizza-slice
+    #   url: https://bumblebeespizza.com
+    #   description: Internet home of Toledo's new Bumblebee's Pizza.
 #   - title: "The CATalogue"
 #     icon: fas fa-cat
 #     url:
@@ -101,6 +101,7 @@
     - title: Spotify
       url: https://www.spotify.com
       icon: fab fa-spotify
+
 - group: Development
   items:
     - title: Confluence
