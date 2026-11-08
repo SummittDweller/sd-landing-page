@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recent site analytics</title>
+<style>
+body{font:16px/1.5 system-ui,sans-serif;color:#243447;background:#fff;margin:0;padding:16px}
+h1{font-size:1.5rem;margin:0}h2{font-size:1.1rem}a{color:#145b9b}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,310px),1fr));gap:12px}
+.card{border:1px solid #ccd5df;border-radius:8px;padding:14px}
+.card p,footer{font-size:.85rem}table{width:100%;border-collapse:collapse;font-size:.85rem}
+th,td{padding:6px 3px;border-bottom:1px solid #e1e6ec;text-align:right}
+th:first-child{text-align:left}caption{text-align:left;font-weight:bold}
+.warning{padding:10px;border:2px solid #986000;background:#fff3cd}
+</style></head><body>
+<h1>Recent site analytics</h1>
+<p>Last 7 completed days compared with the preceding 7 days.</p>
+<p>Updated <time id="updated" datetime="2026-11-08T16:11:38+00:00">2026-11-08T16:11:38+00:00</time> (UTC)</p>
+<p id="stale" class="warning" hidden>This report is over 48 hours old. Automatic refresh may have failed; these are historical counts.</p>
+<div class="cards">
+<section class="card">
+  <h2><a href="https://wieting.tamatoledo.com" target="_blank" rel="noopener noreferrer">Wieting Theatre</a></h2>
+  <p>2026-11-01 to 2026-11-07<br>
+  Previous: 2026-10-25 to 2026-10-31<br>
+  Reporting zone: America/Chicago</p>
+  <table><caption>Seven-day traffic comparison</caption>
+  <thead><tr><th scope="col">Metric</th><th scope="col">Recent</th><th scope="col">Previous</th><th scope="col">Change</th></tr></thead>
+  <tbody><tr><th scope="row">Active users</th><td>18</td><td>0</td><td>No baseline</td></tr><tr><th scope="row">Sessions</th><td>21</td><td>0</td><td>No baseline</td></tr><tr><th scope="row">Page views</th><td>48</td><td>0</td><td>No baseline</td></tr></tbody></table>
+</section>
+<section class="card">
+  <h2><a href="https://hat.tamatoledo.org" target="_blank" rel="noopener noreferrer">Tama-Toledo HAT</a></h2>
+  <p>2026-11-01 to 2026-11-07<br>
+  Previous: 2026-10-25 to 2026-10-31<br>
+  Reporting zone: America/Chicago</p>
+  <table><caption>Seven-day traffic comparison</caption>
+  <thead><tr><th scope="col">Metric</th><th scope="col">Recent</th><th scope="col">Previous</th><th scope="col">Change</th></tr></thead>
+  <tbody><tr><th scope="row">Active users</th><td>0</td><td>0</td><td>No change</td></tr><tr><th scope="row">Sessions</th><td>0</td><td>0</td><td>No change</td></tr><tr><th scope="row">Page views</th><td>0</td><td>0</td><td>No change</td></tr></tbody></table>
+</section>
+<section class="card">
+  <h2><a href="https://summittdweller.com" target="_blank" rel="noopener noreferrer">SummittDweller.com Portal</a></h2>
+  <p>2026-11-01 to 2026-11-07<br>
+  Previous: 2026-10-25 to 2026-10-31<br>
+  Reporting zone: America/Chicago</p>
+  <table><caption>Seven-day traffic comparison</caption>
+  <thead><tr><th scope="col">Metric</th><th scope="col">Recent</th><th scope="col">Previous</th><th scope="col">Change</th></tr></thead>
+  <tbody><tr><th scope="row">Active users</th><td>0</td><td>0</td><td>No change</td></tr><tr><th scope="row">Sessions</th><td>0</td><td>0</td><td>No change</td></tr><tr><th scope="row">Page views</th><td>0</td><td>0</td><td>No change</td></tr></tbody></table>
+</section></div>
+<footer><p>Source: Google Analytics 4. Daily snapshot, not Realtime.
+Recent data can take 24-48 hours to finish processing. Counts exclude visits blocked by browser or consent settings.
+Active users are GA's measured users, not verified people. Users are not deduplicated across sites;
+no combined unique-user total is shown. No baseline means the previous period had zero.
+Only site-level aggregates are published, not visitor details.</p></footer>
+<script>
+const updated = Date.parse(document.getElementById('updated').dateTime);
+function checkAge() { document.getElementById('stale').hidden = Date.now() - updated <= 48 * 60 * 60 * 1000; }
+checkAge();
+setInterval(checkAge, 60000);
+</script></body></html>

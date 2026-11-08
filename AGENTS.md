@@ -26,9 +26,10 @@ push unverified changes.
   under `[params.author]`.
 - `data/links/*` — the link panels rendered on the home page. Add/edit entries
   here to change the navigation cards.
-- `layouts/index.html` — home page template (project override). Contains the
-  "Site Analytics" placeholder panel with wiring instructions for the
-  SummittDweller-Google-Analytics report.
+- `layouts/index.html` — home page template (project override). Embeds
+  `/analytics/report.html` in the Site Analytics panel. The scheduled generator
+  in SummittDweller-Google-Analytics updates `static/analytics/report.html`.
+  Keep credentials and trackers out of that public aggregate report.
 - `layouts/_default/baseof.html` — project override of the theme's base
   template using `.Site.Language.Locale` (the theme's copy uses the removed
   `.Site.LanguageCode`).

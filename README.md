@@ -44,8 +44,21 @@ consent requirements before publishing.
 
 After deployment, reload the live portal and check the portal property's
 Realtime report. Browser blocking can prevent visits from appearing.
-The "Site Analytics" panel remains a placeholder: installing the tracker
-does not automatically populate it with a public report.
+The "Site Analytics" panel embeds `/analytics/report.html`, with a link to
+the full report. Its generator, site configuration, tests, and scheduled
+GitHub Action live in the private SummittDweller-Google-Analytics repository.
+That action copies only the generated aggregate HTML into
+`static/analytics/report.html`, commits it, and pushes to `main`, triggering
+the usual App Platform deployment. No GA credentials are stored here or sent
+to visitors. Do not add a tracker inside the report iframe.
+
+The initial report explicitly says reporting is not configured yet; live
+counts require GA4 property access and automation credentials. Once active,
+reports show the last seven completed days versus the previous seven.
+The update timestamp and a warning after 48 hours identify stale snapshots.
+The iframe scrolls when additional sites exceed its height.
+Its document-relative URL intentionally keeps the report on the serving
+origin even when a Hugo build uses a default or preview base URL.
 
 # Legacy Deployments (Retired)
 
