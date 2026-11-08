@@ -14,12 +14,38 @@
     {{ end }}
 {{ end }}
 
-<!-- source: https://discourse.gohugo.io/t/how-to-use-iframe-content-correctly-in-a-yaml-file/14360 -->
-<iframe src="https://bao.arcgis.com/covid-19/jhu/county/19171.html" width="98%" style="min-height: 400px;" frameborder="0"></iframe>
+<!--
+  Site Analytics panel - placeholder.
+
+  This panel will display a current report from the SummittDweller-Google-Analytics
+  effort (https://github.com/SummittDweller/SummittDweller-Google-Analytics).
+  That report is not defined yet. To wire it in once it exists:
+
+    1. If the report is an embeddable page (e.g., a Looker Studio report or a
+       static HTML page published by the GA effort), replace the placeholder
+       card below with an iframe, like the old COVID panel used to be:
+
+         <iframe src="REPORT-URL-HERE" width="98%" style="min-height: 400px;" frameborder="0"></iframe>
+
+    2. If the report is a generated image or HTML fragment, drop the file into
+       this repo's static/ directory (e.g., static/analytics/report.html) and
+       point the iframe/img at /analytics/report.html instead.
+
+    3. Remove the placeholder card (the div.card block immediately below) and
+       delete this comment once the real report is wired in.
+-->
+<div id="analyticsPanel" class="card mt-3">
+  <div class="card-body">
+    <span class="card-title groupTitle">Site Analytics</span>
+    <p class="card-text mt-2">A current traffic report from the
+      <a href="https://github.com/SummittDweller/SummittDweller-Google-Analytics" target="_blank">SummittDweller-Google-Analytics</a>
+      effort will appear here soon.</p>
+  </div>
+</div>
 
 {{ if .Site.Params.startPageColumns }}
     <div id="groupList" class="card-deck mt-3">
-        {{ range .Site.Data.links }}
+        {{ range hugo.Data.links }}
             <div id="groupListEntry" class="card">
                 <div class="card-body">
                     <span class="card-title groupTitle">{{ .group }}</span>
@@ -34,7 +60,7 @@
     </div>
 {{ else }}
     <div id="iconList" class="card-columns mt-3">
-        {{ range .Site.Data.links }}
+        {{ range hugo.Data.links }}
             {{ range .items }}
                 <div id="iconListEntry" class="card">
                     <div class="card-body cursorPointer" onclick="location.href = '{{ .url }}'">
@@ -49,9 +75,6 @@
 
 <div id="footer" class="footer">
   <p class="disclaimer">The views and opinions expressed here belong solely to the original author(s) and do not necessarily represent or reflect those of Mark McFate, or maybe they do?</p>
-  <div class="build-info">
-    <p><span>Updated: {{ now.Local.Format "Jan 2, 2006 at 3:04pm MST" | markdownify }}<span></p>
-  </div>
 </div>
 
 {{ end }}

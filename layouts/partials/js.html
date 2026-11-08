@@ -1,0 +1,8 @@
+{{ $jquery := resources.Get "/js/jquery-3.4.1.slim.min.js" }}
+{{ $bootstrap := resources.Get "/js/bootstrap.min.js" }}
+{{ $allscript := slice $jquery $bootstrap | resources.Concat "/js/vendor.js" | minify | fingerprint }}
+<script src="{{ $allscript.RelPermalink }}"></script>
+
+<!-- Project-level override of the theme's js.html: the theme references
+     _internal/google_analytics_async.html, which was removed in modern Hugo.
+     Analytics is emitted once by the head.html override instead. -->

@@ -1,53 +1,52 @@
-# summittdweller-landing-page
+# sd-landing-page
 
-This project defines the landing page for my summittdweller.com server.
+This project defines the [Hugo](https://gohugo.io/)-generated landing page for [summittdweller.com](https://summittdweller.com/).
 
-# Deploying this Site
+# Deploying This Site
 
-This site is intended to be deployed using my [docker-bootstrap](https://github.com/McFateM/docker-bootstrap) approach, and the command stream used to launch [the page](https://summittdweller.com/) on my DigitalOcean Docker droplet is:
+This site is deployed via [DigitalOcean App Platform](https://docs.digitalocean.com/products/app-platform/), which is connected directly to this GitHub repository. There is no manual deployment step:
 
-```
-NAME=summittdweller-landing-page
-HOST=summittdweller.com
-IMAGE="summittdweller/summittdweller-landing"
-docker container run -d --name ${NAME} \
-    --label traefik.backend=${NAME} \
-    --label traefik.docker.network=web \
-    --label "traefik.frontend.rule=Host:${HOST}" \
-    --label traefik.port=80 \
-    --label com.centurylinklabs.watchtower.enable=true \
-    --network web \
-    --restart always \
-    ${IMAGE}
-```
+1. Commit and push changes to the `main` branch of this repo.
+2. App Platform detects the push, clones the repo (the `themes/bootstrap-bp-hugo-startpage` theme is committed directly in this repo), builds the site with its Hugo buildpack, and serves the static output at [summittdweller.com](https://summittdweller.com/).
+
+Note that the `baseURL` is intentionally commented out in `config.toml` so that App Platform can serve the site from whatever URL it assigns.
 
 # Updating This Site
 
-The process of adding a site, or any addition/change, to this page is pretty straightforward...
+The process of adding a site, or making any addition/change, to this page is now very simple:
 
 ```
-cd ~/Projects/summittdweller-landing-page
-docker image build -t new-img .
-docker login
-docker tag new-img summittdweller/summittdweller-landing:latest
-docker push summittdweller/summittdweller-landing:latest
+cd ~/GitHub/sd-landing-page
+# ...edit content, config.toml, etc...
+git add -A
+git commit -m "Describe your change"
+git push
 ```
 
-Watchtower should *automagically* take care of the rest!
+App Platform *automagically* takes care of the rest!
 
-# An Even Easier Update
+# Analytics
 
-Not long ago I added the _Atom Shell Commands_ package to my _Atom_ config, added a command named **Push a Static Update**, and pointed that command at the _push_update.sh_ script that is now part of this project.  That _bash_ script, does just a few things, and it reads like this:
+The portal uses a separate GA4 property from the personal blog. Its Web stream
+is `SummittDweller.com portal production website` for
+`https://summittdweller.com`, with Measurement ID `G-3QPKBWP768` and stream ID
+`16297878071`.
 
-```bash
-#!/bin/bash
-cd ~/Projects/summittdweller-landing-page
-perl -i.bak -lpe 'BEGIN { sub inc { my ($num) = @_; ++$num } } s/(build = )(\d+)/$1 . (inc($2))/eg' config.toml
-docker image build -t landing-update .
-docker login
-docker tag landing-update mcfatem/summittdweller-landing:latest
-docker push mcfatem/summittdweller-landing:latest
-```
-The `perl...` line runs a text substitution that opens the project's `config.toml` file, parses it looking for a string that matches `build = ` followed by an integer.  The substitution increments that interger by one and puts the result back into an updated `config.toml` file.  The result is eventually the `Build 14`, or whatever number, that you see just below the site title and descriptions.
+`config.toml` sets the ID under `[services.googleAnalytics]`.
+`layouts/partials/head.html` emits Hugo's built-in GA4 template only in
+production; `layouts/partials/js.html` does not emit a second tracker.
+The Matomo site 7 snippet and obsolete Universal Analytics setting have been
+removed. Do not reuse the personal blog's ID or install another Google tag.
 
-The rest of the _push_update.sh_ script is responsible for building a new docker image, logging in to _Docker Hub_, tagging the new image as the `:latest` version of _summittdweller-landing_, and pushing that new tagged image to my _Docker Hub_ account where _Watchtower_ can do its thing.
+Plain `hugo` builds are production builds. `hugo server` and builds using
+`--environment development` omit analytics. Review applicable privacy and
+consent requirements before publishing.
+
+After deployment, reload the live portal and check the portal property's
+Realtime report. Browser blocking can prevent visits from appearing.
+The "Site Analytics" panel remains a placeholder: installing the tracker
+does not automatically populate it with a public report.
+
+# Legacy Deployments (Retired)
+
+This site was previously deployed as a Docker image (`summittdweller/summittdweller-landing`, later `mcfatem/summittdweller-landing`) pushed to Docker Hub and run on a DigitalOcean Docker droplet behind Traefik, with Watchtower auto-pulling new `:latest` images, and at one point built via Travis CI. Those workflows are retired; their artifacts (`Dockerfile`, `push-update.sh`, `.travis.yml`, etc.) have been preserved in the `.out-of-the-way/` directory for reference.

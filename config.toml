@@ -1,15 +1,18 @@
 # baseURL = "https://summittdweller.com/"
 #
-languageCode = "en-US"
+locale = "en-US"
 title = "SummittDweller.com"
 theme = "bootstrap-bp-hugo-startpage"
-googleAnalytics = "UA-146526628-1"
-#GA4 = "G-K8PWCNJH23"
 copyright = "Mark A. McFate"
 enableRobotsTXT = true
 pygmentsCodeFences = true
 canonifyurls = true
-paginate = 5
+
+[pagination]
+  pagerSize = 5
+
+[services.googleAnalytics]
+  ID = "G-3QPKBWP768"
 
 [sitemap]
   changefreq = "weekly"
@@ -21,11 +24,8 @@ paginate = 5
   pages = "/:slug/"
   page = "/:slug/"
 
-[Author]
-  name = "Mark A. McFate, but mostly Mackenzie G. McFate"
-
 [params]
-  description = "Welcome to Summitt Dweller's landing page on DigitalOcean's App Platform!"
+  description = "Welcome to Summitt Dweller's personal App Platform!"
   #images = ["logo.jpg"]
   startPageColumns = true
   welcomeText = "This landing page is designed solely to provide navigation to the sites/services listed below."
@@ -33,6 +33,9 @@ paginate = 5
   footertext = "<a href='https://summittdweller.com/blogs/mark' target='_blank' class='footer'> <i class='fas fa-code'></i> &nbsp;&nbsp;Hugo site by the McFates.</a>"
   twitter = "https://twitter.com/SummittDweller"
   facebook = "https://facebook.com/Summitt.Dweller"
+
+[params.author]
+  name = "Mark A. McFate, but mostly Mackenzie G. McFate"
 
 [[params.searchEngines]]
   name = "Google"

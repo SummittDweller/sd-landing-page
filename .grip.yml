@@ -1,0 +1,15 @@
+# GRIP - GitHub Repository Inventory and Posters
+# https://github.com/Digital-Grinnell/GRIP
+#
+# The presence of this file at the root of a repository marks it as a
+# "reported repo": when GRIP finds this file it includes the repo in the
+# inventory/report it generates, using the metadata below.
+
+grip: true
+
+display_name: "SummittDweller.com Landing Page"
+description: "Hugo-generated landing page providing navigation to the sites/services hosted on Summitt Dweller's personal App Platform."
+category: "landing-page"
+homepage: "https://summittdweller.com/"
+status: "active"
+host_notes: "DigitalOcean App Platform; auto-builds Hugo from the main branch of this GitHub repo."
